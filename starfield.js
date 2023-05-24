@@ -1,37 +1,3 @@
-let btn = document.getElementById("myBtn");
-let jediNameDiv = document.querySelector(".jediNameDiv");
-
-function jediBtn() {
-
-  let firstName = document.getElementById("firstname").value;
-  let lastName = document.getElementById("lastname").value;
-  let maidenName = document.getElementById("maidenname").value;
-
-  let jediName = generateJediName(firstName, lastName, maidenName);
-
-  jediNameDiv.innerText = jediName;
-}
-
-function generateJediName(firstName, lastName, maidenName) {
-  let jediFirst = lastName.slice(0, 3) + firstName.slice(0, 2);
-  jediFirst =
-    jediFirst.charAt(0).toUpperCase() + jediFirst.slice(1).toLowerCase();
-  let jediLast = maidenName.slice(0, 3);
-  jediLast = jediLast.charAt(0).toUpperCase() + jediLast.slice(1).toLowerCase();
-
-  return jediFirst + " " + jediLast;
-}
-
-const form = document.querySelector("#jediform");
-
-form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  jediBtn();
-});
-
-
-
-
 //////STARS////
 
 var canvas = document.getElementById("canvas");
@@ -88,4 +54,3 @@ function draw() {
 
 // Call draw function
 draw();
-
